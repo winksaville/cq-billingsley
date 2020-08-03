@@ -1,16 +1,3 @@
-# CadQuery sweep problem
-
-John Billingsley reported a [problem with sweep]( https://groups.google.com/g/cadquery/c/UrPx8CiSdY0/m/rYtuHCR6AgAJ).
-
-This is my attempt to see what's wrong.
-
-After a few steps I got to "how" to do the actual sweep
-and searched the cadquery sources and found
-Ex024_Sweep_With_Multiple_Sections.py. Looks to be a good
-starting point:
-
-Extract the arcSweep example from Ex024 to x2.py:
-```
 import cadquery as cq
 
 # Switch to an arc for the path : line l=5.0 then half circle r=4.0 then line l=5.0
@@ -39,6 +26,4 @@ arcSweep = (
     .circle(1.0)
     .sweep(path, multisection=True)
 )
-```
 
-![](./ss_x2-unchanged-arcSweep-from-Ex024.png)

@@ -3,7 +3,7 @@ import cadquery as cq
 path = (
     cq.Workplane("XY")
     .moveTo(20, 0)
-    .radiusArc(endPoint=(0, 20), radius=20)
+    .radiusArc(endPoint=(0, 20), radius=-20)
 )
 
 poly1 = (
